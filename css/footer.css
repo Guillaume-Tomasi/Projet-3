@@ -1,0 +1,36 @@
+footer {
+  background: #353535;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 25px;
+}
+
+footer img {
+  -webkit-filter: invert(100%) sepia(2%) saturate(8%) hue-rotate(18deg) brightness(105%) contrast(103%);
+          filter: invert(100%) sepia(2%) saturate(8%) hue-rotate(18deg) brightness(105%) contrast(103%);
+  height: 18px;
+  margin-bottom: 12px;
+}
+
+footer li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+footer li i {
+  margin-right: 12px;
+  font-size: 12px;
+}
+
+footer li .fa-hands-helping {
+  width: 10px;
+}
+/*# sourceMappingURL=footer.css.map */

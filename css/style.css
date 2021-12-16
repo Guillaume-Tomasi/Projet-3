@@ -1,0 +1,366 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("footer.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", sans-serif;
+}
+
+body {
+  min-width: 350px;
+  margin: auto;
+  height: 100%;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  height: 65px;
+}
+
+header #Header_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 22px 0 12px 0;
+}
+
+header #Header_logo img {
+  height: 30px;
+  width: auto;
+}
+
+#Research {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f6f6f6;
+}
+
+#Research #research_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+#Research #Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #eaeaea), to(#cfcfcf));
+  background: linear-gradient(0deg, #eaeaea 90%, #cfcfcf);
+}
+
+#Research #Form #Search_Input {
+  border: none;
+  background: transparent;
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  height: 100%;
+  font-weight: 500;
+  text-align: center;
+  width: 150px;
+}
+
+#Research #description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 45px 40px 60px 40px;
+  text-align: center;
+}
+
+#Research #Button_Explore {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356DC));
+  background: linear-gradient(#ff79da, #9356DC);
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 5px 8px #cfcfcf;
+          box-shadow: 0 5px 8px #cfcfcf;
+  margin-top: 30px;
+}
+
+#Functioning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px;
+}
+
+#Functioning h1 {
+  margin: 50px 0 20px 0;
+}
+
+#Functioning #button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#Functioning .Button_Functioning {
+  background: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 5px 10px #e7e7e7;
+          box-shadow: 0 5px 10px #e7e7e7;
+  height: 75px;
+  width: 325px;
+  max-width: 325px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+#Functioning .Button_Functioning:hover {
+  background: #f5edff;
+  cursor: pointer;
+}
+
+#Functioning .Button_Functioning .button_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Functioning .Button_Functioning .button_content .Number {
+  background: #9356DC;
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  min-height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3px;
+  color: white;
+  font-weight: 400;
+  margin-left: -3%;
+  margin-right: 6%;
+}
+
+#Functioning .Button_Functioning .button_content i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 18px;
+  width: 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 6%;
+}
+
+#Functioning .Button_Functioning .button_content span {
+  font-size: 16px;
+}
+
+#Restaurants {
+  background: #f6f6f6;
+  padding: 50px 20px;
+  margin-top: 35px;
+}
+
+#Restaurants h1 {
+  margin-bottom: 20px;
+}
+
+#Restaurants #cards_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#Restaurants .Card {
+  width: 335px;
+  max-height: 250px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 5px 10px #e7e7e7;
+          box-shadow: 0 5px 10px #e7e7e7;
+}
+
+#Restaurants .Card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 175px;
+  -o-object-position: 0 60%;
+     object-position: 0 60%;
+}
+
+#Restaurants .Card .New {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #99e2d0;
+  position: relative;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 160px;
+  max-width: 80px;
+  padding: 7px 0;
+  margin-left: 245px;
+  margin-right: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #008766;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 5px -2px #e7e7e7;
+          box-shadow: 0 1px 5px -2px #e7e7e7;
+  text-shadow: 0 0 1px;
+}
+
+#Restaurants .Card .card_body {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 75px;
+  position: relative;
+  bottom: 35px;
+  padding: 0 15px;
+}
+
+#Restaurants .Card .card_body .card_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#Restaurants .Card .card_body .card_description h4 {
+  font-size: 18px;
+}
+
+#Restaurants .Card .card_body .card_description p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+#Restaurants .Card .card_body i {
+  font-size: 25px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+#Restaurants .Card .card_body .fas.fa-heart {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#ff79da));
+  background: linear-gradient(#9356DC, #ff79da);
+  position: absolute;
+  right: 15px;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#Restaurants .Card .card_body .fas.fa-heart:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 100%;
+}
+
+#Restaurants #card_française .New, #Restaurants #card_delice .New {
+  display: none;
+}
+
+#Restaurants #card_française img, #Restaurants #card_delice img {
+  height: 210px;
+}
+/*# sourceMappingURL=style.css.map */
