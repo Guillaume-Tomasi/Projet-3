@@ -334,26 +334,36 @@ header #Header_logo img {
   font-size: 16px;
 }
 
-#Restaurants .Card .card_body i {
-  font-size: 25px;
-  padding-right: 15px;
-  padding-bottom: 10px;
-}
-
 #Restaurants .Card .card_body .fas.fa-heart {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#ff79da));
   background: linear-gradient(#9356DC, #ff79da);
-  position: absolute;
-  right: 15px;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#Restaurants .Card .card_body .fas.fa-heart:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  opacity: 100%;
+#Restaurants .Card .card_body .checked {
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#Restaurants .Card .card_body input[type=checkbox] {
+  display: none;
+}
+
+#Restaurants .Card .card_body input[type=checkbox]:checked ~ .checked {
+  opacity: 1;
+}
+
+#Restaurants .Card .card_body input[type=checkbox]:checked ~ .unchecked {
+  display: none;
+}
+
+#Restaurants .Card .card_body i {
+  font-size: 25px;
+  padding-right: 15px;
+  padding-bottom: 10px;
 }
 
 #Restaurants #card_française .New, #Restaurants #card_delice .New {
