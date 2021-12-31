@@ -1,0 +1,27 @@
+
+@keyframes progress_anim {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#starter .menu_card {
+    animation: progress_anim 1s;
+    animation-fill-mode: forwards;
+}
+#main_menu .menu_card {
+    animation: progress_anim 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+#dessert .menu_card {
+    animation: progress_anim 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}

@@ -101,8 +101,13 @@ header {
         height: 50px;
         padding: 0 20px;
         border-radius: 30px;
-        box-shadow: 0 5px 8px #cfcfcf;
+        box-shadow: 0 3px 8px 2px #cfcfcf;
         margin-top: 30px;
+        &:hover {
+            opacity: .9;
+            box-shadow: 0 0 8px 4px #cfcfcf;
+            transition: 0.1s;
+        }
         
     }
 }
@@ -261,25 +266,37 @@ header {
                 -webkit-text-fill-color: transparent;
             }
 
+            
+
+            .heart_label .fa-heart {
+                position: absolute;
+                bottom: 20px;
+                right: 15px;
+                cursor: pointer;
+            }
+            
             .checked {
                 opacity: 0;
-                transition: 1s;
+                transition: .3s;
+                z-index: 1;
+            }
+
+            .unchecked {
+                opacity: 1;
+                transition: .3s;
             }
             
-            input[type=checkbox] {
+            .like {
                 display: none;
             }
-            input[type=checkbox]~.checked {
-                // display: none;
-            }
             
-            input[type=checkbox]:checked~.checked {
-                display:inline-block;
+            
+            .like:checked~.heart_label .checked {
                 opacity: 1;
             }
             
-            input[type=checkbox]:checked~.unchecked {
-                display: none;
+            .like:checked~.heart_label .unchecked {
+                opacity: 0;
             }
 
             i {
@@ -291,10 +308,6 @@ header {
     }
 
     #card_française, #card_delice {
-
-        .New {
-            display: none;
-        }
 
         img {
             height: 210px;

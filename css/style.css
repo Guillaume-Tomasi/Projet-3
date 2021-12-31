@@ -137,9 +137,17 @@ header #Header_logo img {
   height: 50px;
   padding: 0 20px;
   border-radius: 30px;
-  -webkit-box-shadow: 0 5px 8px #cfcfcf;
-          box-shadow: 0 5px 8px #cfcfcf;
+  -webkit-box-shadow: 0 3px 8px 2px #cfcfcf;
+          box-shadow: 0 3px 8px 2px #cfcfcf;
   margin-top: 30px;
+}
+
+#Research #Button_Explore:hover {
+  opacity: .9;
+  -webkit-box-shadow: 0 0 8px 4px #cfcfcf;
+          box-shadow: 0 0 8px 4px #cfcfcf;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 #Functioning {
@@ -342,32 +350,42 @@ header #Header_logo img {
   -webkit-text-fill-color: transparent;
 }
 
-#Restaurants .Card .card_body .checked {
-  opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
+#Restaurants .Card .card_body .heart_label .fa-heart {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  cursor: pointer;
 }
 
-#Restaurants .Card .card_body input[type=checkbox] {
+#Restaurants .Card .card_body .checked {
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 1;
+}
+
+#Restaurants .Card .card_body .unchecked {
+  opacity: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#Restaurants .Card .card_body .like {
   display: none;
 }
 
-#Restaurants .Card .card_body input[type=checkbox]:checked ~ .checked {
+#Restaurants .Card .card_body .like:checked ~ .heart_label .checked {
   opacity: 1;
 }
 
-#Restaurants .Card .card_body input[type=checkbox]:checked ~ .unchecked {
-  display: none;
+#Restaurants .Card .card_body .like:checked ~ .heart_label .unchecked {
+  opacity: 0;
 }
 
 #Restaurants .Card .card_body i {
   font-size: 25px;
   padding-right: 15px;
   padding-bottom: 10px;
-}
-
-#Restaurants #card_française .New, #Restaurants #card_delice .New {
-  display: none;
 }
 
 #Restaurants #card_française img, #Restaurants #card_delice img {
