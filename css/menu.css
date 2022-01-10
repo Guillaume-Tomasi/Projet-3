@@ -149,19 +149,32 @@ header #Header_logo img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 70px;
   width: 100%;
   max-width: 420px;
   border-radius: 15px;
-  padding: 0 10px 0 15px;
   margin-bottom: 14px;
   -webkit-box-shadow: 0 1px 10px #e7e7e7;
           box-shadow: 0 1px 10px #e7e7e7;
   opacity: 0;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.menu_card .text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px 0 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .menu_card .subtext {
@@ -171,15 +184,6 @@ header #Header_logo img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.menu_card p {
-  width: 85%;
-}
-
-.menu_card .price {
-  font-weight: 600;
-  position: relative;
 }
 
 #starter {

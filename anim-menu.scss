@@ -1,4 +1,6 @@
+$tertiary: #99e2d0;
 
+// Affichage Progressif
 @keyframes progress_anim {
     0% {
         opacity: 0;
@@ -11,9 +13,46 @@
     }
 }
 
+@keyframes progress_check {
+    0% {
+        transform: translateX(80px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes rotate_check {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-720deg);
+    }
+}
+
+@keyframes progress_unchecked {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(80px);
+    }
+}
+.menu_card .check {
+    animation: progress_check 1s;
+    .fa-check-circle {
+        animation: rotate_check 1s;
+    }
+
+}
+
 #starter .menu_card {
     animation: progress_anim 1s;
     animation-fill-mode: forwards;
+    transform-origin: right;
 }
 #main_menu .menu_card {
     animation: progress_anim 1s;
@@ -25,3 +64,40 @@
     animation-delay: 0.6s;
     animation-fill-mode: forwards;
 }
+
+// checkbox
+
+.like_menu {
+    display: none;
+}
+
+
+label {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    
+    
+}
+
+.check {
+    background: $tertiary;
+    font-size: 30px;
+    color: white;
+    width: 80px;
+    border-radius: 0px 15px 15px 0;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+
+.like_menu:checked~label .check {
+    display: flex;
+    
+}
+
+
+
