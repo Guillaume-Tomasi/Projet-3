@@ -12,7 +12,7 @@ $tertiary: #99e2d0;
 }
 
 body {
-    min-width: 350px;
+    min-width: 360px;
     background: #f6f6f6;
 }
 
@@ -26,12 +26,15 @@ h1 {
 h2 {
     font-size: 16px;
     font-weight: 400;
-    margin-left: 5px;
+    margin-left: 20px;
 }
 
 h4 {
     font-size: 18px;
     margin: 12px 0 5px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 p {
@@ -39,6 +42,9 @@ p {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin-bottom: 12px;
+
+    
     
 }
 
@@ -98,8 +104,8 @@ header {
     bottom: 40px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
-    padding: 0 12px;
+    align-items: center;
+    // margin: 0 12px;
     
 }
 
@@ -109,7 +115,7 @@ header {
     align-items: center;
     width: 350px;
     justify-content: space-between;
-    padding: 35px 15px 25px 8px;
+    padding: 35px 20px 25px 8px;
 
     i {
         font-size: 25px;
@@ -122,82 +128,104 @@ header {
     background: $tertiary;
     height: 3px;
     width: 40px;
-    margin: 5px 0 14px 5px;
+    margin: 5px 0 14px 20px;
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    // width: 100%;
+    max-width: 375px;
 }
-
-// .menu_card {
-//     background: white;
-//     display: flex;
-//     flex-direction: column;
-//     height: 70px;
-//     width: 100%;
-//     max-width: 420px;
-//     border-radius: 15px;
-//     padding: 0 10px 0 15px;
-//     margin-bottom: 14px;
-//     box-shadow: 0 1px 10px #e7e7e7;
-//     opacity: 0;
-    
-//     .subtext {
-//         display: flex;
-//         justify-content: space-between;
-//         // padding: 0 12px 0 0;
-//         // width: 300px;
-        
-//     }
-
-//     p {
-//         width: 85%;
-//     }
-
-
-//     .price {
-//         font-weight: 600;
-//         position: relative;
-//         // left: 15%;
-//     }
-// }
 
 .menu_card {
     background: white;
     display: flex;
+    // flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    // align-content: center;
     height: 70px;
     width: 100%;
-    max-width: 420px;
+    // width: 360px;
     border-radius: 15px;
+    // padding: 0 10px 0 15px;
+    margin-left: 12px;
+    margin-right: 12px;
     margin-bottom: 14px;
     box-shadow: 0 1px 10px #e7e7e7;
-    opacity: 0;
     overflow: hidden;
-    transition: 1s;
-
-    .text {
-        width: 100%;
-        display: flex; 
-        padding: 0 10px 0 15px;
-        // border: 1px solid blue;
+    opacity: 0;
+    cursor: pointer;
+    &:hover {
+        .right_subtext{
+            margin-right: 0;
+        }
+        .fa-check-circle {
+            animation: rotate_check .5s;
+        }
+    }
+    
+    .menu_text {
+        display: flex;
         flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        margin-left: 12px;
+        overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    // border: 1px solid red;
+    // padding-left: 10px;
+    max-width: 77%;
     }
 
-    .subtext {
+    .right_subtext {
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        // border: 1px solid red;
+        // max-width: 100%;
+        // width: max-content;
+        // border: 1px solid green;
+        margin-right: -72px;
+        height: 100%;
+        // width: 350px;
+        transition: .5s;
+    }
+
+
+    .price {
+        font-weight: 600;
+        // position: relative;
+        padding: 35px 25px 8px 0;
+        margin-left: 12px;
+    }
+
+    .check {
+        background: $tertiary;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        font-size: 25px;
+        color: white;
+        width: 60px;
+        border-radius: 0 15px 15px 0;
     }
 }
 
 #starter {
     margin: auto;
     max-width: 380px;
+    // padding: 0 12px;
     display: flex;
     flex-direction: column;
+    .menu_card {
+        animation: progress_anim 1s;
+        animation-fill-mode: forwards;
+    }
 }
 
 #main_menu {
@@ -206,6 +234,11 @@ header {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    .menu_card {
+        animation: progress_anim 1s;
+        animation-delay: 0.3s;
+        animation-fill-mode: forwards;
+    }
 }
 
 #dessert {
@@ -214,6 +247,11 @@ header {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    .menu_card {
+        animation: progress_anim 1s;
+        animation-delay: 0.6s;
+        animation-fill-mode: forwards;
+    }
 }
 
 #command {
@@ -242,3 +280,4 @@ header {
 @import url("footer.css");
 
 }
+

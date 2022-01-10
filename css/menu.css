@@ -10,7 +10,7 @@
 }
 
 body {
-  min-width: 350px;
+  min-width: 360px;
   background: #f6f6f6;
 }
 
@@ -23,12 +23,15 @@ h1 {
 h2 {
   font-size: 16px;
   font-weight: 400;
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 h4 {
   font-size: 18px;
   margin: 12px 0 5px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 p {
@@ -36,6 +39,7 @@ p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  margin-bottom: 12px;
 }
 
 li {
@@ -104,7 +108,9 @@ header #Header_logo img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #title {
@@ -119,7 +125,7 @@ header #Header_logo img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 35px 15px 25px 8px;
+  padding: 35px 20px 25px 8px;
 }
 
 #title i {
@@ -130,7 +136,7 @@ header #Header_logo img {
   background: #99e2d0;
   height: 3px;
   width: 40px;
-  margin: 5px 0 14px 5px;
+  margin: 5px 0 14px 20px;
 }
 
 .cards {
@@ -142,6 +148,7 @@ header #Header_logo img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 375px;
 }
 
 .menu_card {
@@ -152,38 +159,89 @@ header #Header_logo img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 70px;
   width: 100%;
-  max-width: 420px;
   border-radius: 15px;
+  margin-left: 12px;
+  margin-right: 12px;
   margin-bottom: 14px;
   -webkit-box-shadow: 0 1px 10px #e7e7e7;
           box-shadow: 0 1px 10px #e7e7e7;
-  opacity: 0;
   overflow: hidden;
-  -webkit-transition: 1s;
-  transition: 1s;
+  opacity: 0;
+  cursor: pointer;
 }
 
-.menu_card .text {
-  width: 100%;
+.menu_card:hover .right_subtext {
+  margin-right: 0;
+}
+
+.menu_card:hover .fa-check-circle {
+  -webkit-animation: rotate_check .5s;
+          animation: rotate_check .5s;
+}
+
+.menu_card .menu_text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 10px 0 15px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  margin-left: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 77%;
 }
 
-.menu_card .subtext {
+.menu_card .right_subtext {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-right: -72px;
+  height: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu_card .price {
+  font-weight: 600;
+  padding: 35px 25px 8px 0;
+  margin-left: 12px;
+}
+
+.menu_card .check {
+  background: #99e2d0;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 25px;
+  color: white;
+  width: 60px;
+  border-radius: 0 15px 15px 0;
 }
 
 #starter {
@@ -196,6 +254,13 @@ header #Header_logo img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#starter .menu_card {
+  -webkit-animation: progress_anim 1s;
+          animation: progress_anim 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 #main_menu {
@@ -211,6 +276,15 @@ header #Header_logo img {
   margin-top: 20px;
 }
 
+#main_menu .menu_card {
+  -webkit-animation: progress_anim 1s;
+          animation: progress_anim 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 #dessert {
   margin: auto;
   max-width: 380px;
@@ -222,6 +296,15 @@ header #Header_logo img {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 30px;
+}
+
+#dessert .menu_card {
+  -webkit-animation: progress_anim 1s;
+          animation: progress_anim 1s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 #command {
