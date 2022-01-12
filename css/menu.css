@@ -26,15 +26,16 @@ h2 {
   margin-left: 20px;
 }
 
-h4 {
+.h4 {
   font-size: 18px;
   margin: 12px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-weight: 600;
 }
 
-p {
+.p {
   font-size: 15px;
   overflow: hidden;
   white-space: nowrap;
@@ -151,6 +152,23 @@ header #Header_logo img {
   max-width: 375px;
 }
 
+input {
+  display: none;
+}
+
+label {
+  width: 100%;
+}
+
+.checkbox:checked + label .right_subtext {
+  margin-right: 0;
+}
+
+.checkbox:checked + label .fa-check-circle {
+  -webkit-animation: rotate_check .5s;
+          animation: rotate_check .5s;
+}
+
 .menu_card {
   background: white;
   display: -webkit-box;
@@ -164,6 +182,7 @@ header #Header_logo img {
           justify-content: space-between;
   height: 70px;
   width: 100%;
+  max-width: 350px;
   border-radius: 15px;
   margin-left: 12px;
   margin-right: 12px;
@@ -173,15 +192,6 @@ header #Header_logo img {
   overflow: hidden;
   opacity: 0;
   cursor: pointer;
-}
-
-.menu_card:hover .right_subtext {
-  margin-right: 0;
-}
-
-.menu_card:hover .fa-check-circle {
-  -webkit-animation: rotate_check .5s;
-          animation: rotate_check .5s;
 }
 
 .menu_card .menu_text {
