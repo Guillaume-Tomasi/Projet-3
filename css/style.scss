@@ -1,62 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import '_variables.scss';
+@import '_reglages-accueil.scss';
 
-$primary: #9356DC;
-$secondary: #ff79da;
-$tertiary: #99e2d0;
-
-
-
-
-// Réglages généraux
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "roboto", sans-serif;
-}
-
-body {
-    min-width: 350px;
-    margin: auto;
-    height: 100%;
-    z-index: 1;
-}
-
-h1 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 16px;
-    font-weight: 300;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-// Loader
-
+                                                      // Loader
 #loader {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 10;
-    // z-index: -2;
     background: white;
-    animation: loading 0.1s linear 3s forwards;
+    animation: loading 0.1s linear 3s forwards;   
 
     .spinner {
         position: absolute;
         border: 6px solid rgba(0, 0, 0, 0.1);
         top: 50%;
         left: 50%;
+        transform: translate(-50%, -50%);
         width: 60px;
         height: 60px;
         border-radius: 50px;
@@ -75,8 +36,7 @@ a {
         animation: spinner 1.5s linear 0s infinite;
     }
 }
-
-// Header
+                                                      // Header
 header {
     height: 65px;
 
@@ -84,19 +44,20 @@ header {
         display: flex;
         justify-content: center;
         padding: 22px 0 12px 0;
-    
+
         img {
             height: 30px;
             width: auto;
         }
     }
 }
-
+                                                      // Research 
 #Research {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #f6f6f6;
+
     #research_bar {
         display: flex;
         justify-content: space-around;
@@ -111,6 +72,7 @@ header {
         width: 100%;
         height: 50px;
         background: linear-gradient(0deg, #eaeaea 90%, #cfcfcf);
+
         #Search_Input {
             border: none;
             background: transparent;
@@ -129,6 +91,7 @@ header {
         padding: 45px 40px 60px 40px;
         text-align: center;
     }
+                                                          // Button
     #Button_Explore {
         color: white;
         display: flex;
@@ -144,10 +107,9 @@ header {
             box-shadow: 0 0 8px 4px #cfcfcf;
             transition: 0.1s;
         }
-        
     }
 }
-
+                                                      // Functioning 
 #Functioning {
     display: flex;
     flex-direction: column;
@@ -156,13 +118,12 @@ header {
     h1 {
         margin: 50px 0 20px 0;
     }
-
+                                                      // Buttons 
     #button_container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         flex-wrap: wrap;
     }
-
     .Button_Functioning {
         background: #f6f6f6;
         display: flex;
@@ -179,8 +140,6 @@ header {
             background: #f5edff;
             cursor: pointer;
         }
-        
-
         .button_content {
             display: flex;
             width: 100%;
@@ -200,8 +159,6 @@ header {
                 margin-left: -3%;
                 margin-right: 6%;
             }
-
-
             i {
                 display: flex;
                 height: 18px;
@@ -215,7 +172,7 @@ header {
         }
     }
 }
-
+                                                      // Restaurants 
 #Restaurants {
     background: #f6f6f6;
     padding: 50px 20px;
@@ -224,16 +181,14 @@ header {
     h1 {
         margin-bottom: 20px;
     }
-
+                                                      // Cards 
     #cards_container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
-
     .Card {
         width: 335px;
-        // height: 250px;
         max-height: 250px;
         height: max-content;
         overflow: hidden;
@@ -247,23 +202,17 @@ header {
             height: 175px;
             object-position: 0 60%;
         }
-
         .New {
             display: flex;
             background: $tertiary;
-            // border: 1px solid red;
             position: relative;
             text-align: center;
             justify-content: center;
             bottom: 160px;
-            // left: 240px;
-            // left: 72%;
-            // width: 80px;
             max-width: 80px;
             padding: 7px 0;
             margin-left: 245px;
             margin-right: 5px;
-            // height: 30px;
             font-size: 14px;
             font-weight: 500;
             color: #008766;
@@ -288,53 +237,41 @@ header {
                 h4 {
                     font-size: 18px;
                 }
-
                 p{
                     margin: 5px 0;
                     font-size: 16px;
                 }
             }
-            
             .fas.fa-heart {
                 background: linear-gradient($primary, $secondary);
                 background-clip: border-box;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
-
-            
-
             .heart_label .fa-heart {
                 position: absolute;
                 bottom: 20px;
                 right: 15px;
                 cursor: pointer;
             }
-            
             .checked {
                 opacity: 0;
                 transition: .3s;
                 z-index: 1;
             }
-
             .unchecked {
                 opacity: 1;
                 transition: .3s;
-            }
-            
+            }   
             .like {
                 display: none;
-            }
-            
-            
+            }            
             .like:checked~.heart_label .checked {
                 opacity: 1;
-            }
-            
+            }           
             .like:checked~.heart_label .unchecked {
                 opacity: 0;
             }
-
             i {
                 font-size: 25px;
                 padding-right: 15px;
@@ -342,14 +279,58 @@ header {
             }
         }
     }
-
     #card_française, #card_delice {
-
         img {
             height: 210px;
         } 
     }
+} 
+                                                      // Footer 
+footer {
+    background: #353535;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 0px 25px 20px;
 
+    #Footer_bloc {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+    }
+    li {
+        margin-bottom: 8px;
+        font-size: 16px;
 
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        i {
+            margin-right: 12px;
+            font-size: 12px;
+        }
+        .fa-hands-helping {
+            width: 10px;
+        }
+    }
 }
-@import url("footer.css");
+
+                                                      // Tablette/Desktop
+
+@media screen and (min-width: 710px) {
+
+    #Functioning, #Restaurants {
+        h1 {
+           display: flex;
+           justify-content: center;
+        }
+    }  
+    #Footer_bloc {
+        align-items: center;
+
+        h2 {
+            margin-right: 85px;
+        }
+    }
+}

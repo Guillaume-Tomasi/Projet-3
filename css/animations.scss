@@ -1,16 +1,15 @@
-
+                                                      // Animation : Cards
 @keyframes progress_anim {
-    0% {
+    from {
         opacity: 0;
         transform: translateY(20px);
     }
-
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0px);
     }
 }
-
+                                                      // Animation : Check cards
 @keyframes rotate_check {
     from {
         transform: rotate(0deg);
@@ -19,7 +18,7 @@
         transform: rotate(360deg);
     }
 }
-
+                                                      // Animation : Loading spinner
 @keyframes spinner {
     from {
         transform: rotate(0deg);
@@ -27,8 +26,7 @@
     to {
         transform: rotate(360deg);
     }
-}
-
+}                                                     
 @keyframes loading {
     from {
         opacity: 1;
@@ -38,6 +36,7 @@
         z-index: -3;
     }
 }
+
 
 
 
